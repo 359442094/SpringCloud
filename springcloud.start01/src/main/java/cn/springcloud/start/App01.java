@@ -3,6 +3,7 @@ package cn.springcloud.start;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -17,8 +18,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @MapperScan(basePackages = {
         "cn.springcloud.model.mapper"
 })
-@EnableSwagger2
-@EnableEurekaClient
+@EnableSwagger2         //开启Swagger2
+@EnableEurekaClient     //自动注册至eureka注册中心
+@EnableCircuitBreaker   //开启hystrix服务熔断
 public class App01 {
     public static void main(String[] args) {
         SpringApplication.run(App01.class,args);
