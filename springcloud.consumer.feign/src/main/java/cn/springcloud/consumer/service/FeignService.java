@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
-@FeignClient(value = "SPRINGCLOUD.START")
+@FeignClient(value = "SPRINGCLOUD.START",fallbackFactory = FeignFallBackFactory.class)
 public interface FeignService {
 
     @RequestMapping(path = "/user/all",method = RequestMethod.GET)
