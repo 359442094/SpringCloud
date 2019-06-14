@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class,
@@ -15,8 +16,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableFeignClients(basePackages = {
         "cn.springcloud.consumer.service"
 })
-@EnableCircuitBreaker
-@EnableEurekaClient
+@EnableCircuitBreaker       //支持hystrix容错
+@EnableEurekaClient         //eureke客户端
+@EnableHystrixDashboard     //hystrix服务监控
 public class ConsumerFeignApp {
 
     public static void main(String[] args) {
