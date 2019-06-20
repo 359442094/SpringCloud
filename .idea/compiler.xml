@@ -16,6 +16,7 @@
         <module name="springcloud.service" />
         <module name="springcloud.start01" />
         <module name="springcloud.start02" />
+        <module name="springcloud.zuul" />
       </profile>
     </annotationProcessing>
   </component>

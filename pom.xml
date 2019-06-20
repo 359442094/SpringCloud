@@ -18,6 +18,7 @@
         <module>springcloud.eureka</module>
         <module>springcloud.consumer.ribbon</module>
         <module>springcloud.consumer.feign</module>
+        <module>springcloud.zuul</module>
     </modules>
 
     <packaging>pom</packaging>
