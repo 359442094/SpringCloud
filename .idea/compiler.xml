@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud.api" />
+        <module name="springcloud.config.client" />
+        <module name="springcloud.config.server" />
         <module name="springcloud.consumer.feign" />
         <module name="springcloud.consumer.ribbon" />
         <module name="springcloud.controller" />
