@@ -6,16 +6,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ConfigController {
+public class ConfigClientController {
+    @Value("${spring.application.admin.name}")
+    private String adminName;
+
+    @Value("${spring.profiles.active}")
+    private String active;
 
     @Value("${server.port}")
     private String port;
-    @Value("${spring.cloud.config.profile}")
-    private String profile;
 
     @RequestMapping(path = "/config",method = RequestMethod.GET)
-    public String configInfo(){
-        return new String("port:"+port+"\n"+"profile:"+profile+"\n");
+    public String showConfigInfo(){
+        return "port:"+port+"\n"+"active:"+active+"\n"+"adminName:"+adminName;
     }
 
 }

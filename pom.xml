@@ -19,8 +19,9 @@
         <module>springcloud.consumer.ribbon</module>
         <module>springcloud.consumer.feign</module>
         <module>springcloud.zuul</module>
-        <module>springcloud.config.server</module>
+        <module>springcloud.config.server.git</module>
         <module>springcloud.config.client</module>
+        <module>springcloud.config.server.native</module>
     </modules>
 
     <packaging>pom</packaging>

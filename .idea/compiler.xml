@@ -9,7 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud.api" />
         <module name="springcloud.config.client" />
-        <module name="springcloud.config.server" />
+        <module name="springcloud.config.server.git" />
+        <module name="springcloud.config.server.native" />
         <module name="springcloud.consumer.feign" />
         <module name="springcloud.consumer.ribbon" />
         <module name="springcloud.controller" />
@@ -19,7 +20,11 @@
         <module name="springcloud.start01" />
         <module name="springcloud.start02" />
         <module name="springcloud.zuul" />
+        <module name="springcloudconfigserver" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloudconfigserver" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

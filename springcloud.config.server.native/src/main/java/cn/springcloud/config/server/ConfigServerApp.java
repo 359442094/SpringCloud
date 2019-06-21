@@ -1,16 +1,18 @@
-package cn.springcloud.config.client;
+package cn.springcloud.config.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class
 })
-public class ClientApp {
+@EnableConfigServer
+public class ConfigServerApp {
     public static void main(String[] args) {
-        SpringApplication.run(ClientApp.class,args);
+        SpringApplication.run(ConfigServerApp.class,args);
     }
 }
